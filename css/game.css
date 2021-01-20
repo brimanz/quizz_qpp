@@ -1,0 +1,108 @@
+/*styles
+
+0. colors
+1.generic styles
+2.elements
+    2.1 class
+    2.2 pseudo-class
+    2.3 id 
+3.mediaquery
+*/
+
+/*----------------------0. colors-----------------------*/
+/*
+color 1 => #f7f7f7;
+color 2 => #1a2a6c;
+color 3 => #1CB5E0;
+*/
+
+
+/*----------------------1. generic styles-----------------------*/
+body {
+    color: #f7f7f7;
+}
+
+/*----------------------end generic styles-----------------------*/
+
+/*----------------------2. elements-----------------------*/
+/*--------2.1 class-----------*/
+.choice-container {
+    margin-top: 1rem;
+    display: flex;
+    color: #1a2a6c;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 3rem;
+    min-width: 80rem;
+    border-radius: 50px;
+    background: #f7f7f7;
+    box-shadow:  17px -17px 35px #d2d2d2,
+                -17px 17px 35px #ffffff;
+}
+
+.choice-prefix {
+    padding: 2rem 2.5rem;
+    color: #1CB5E0;
+}
+
+.choice-text {
+    padding: 2rem;
+    width: 100%;
+}
+
+.correct {
+    background: linear-gradient(32deg, rgba(11, 223, 36) 0%, rgb(41, 232, 111) 100%);
+}
+
+.incorrect {
+    background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgb(224, 11, 11, 1) 100%);
+}
+
+.hud-prefix {
+    color: #1CB5E0;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+/*--------2.2 pseudo-class-----------*/
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
+    transform: scale(1.02);
+    transform: transform 100ms;
+}
+
+/*--------2.3 id-----------*/
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+#progressBar {
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid rgb(11,223,36);
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#progressBarFull {
+    height: 100%;
+    background: rgb(11,223,36);
+    width: 0%;
+}
+
+/*----------------------end elements-----------------------*/
+
+/*----------------------3. mediaquery-----------------------*/
+@media screen and (max-width: 768px) {
+    .choice-container {
+        min-width: 40rem;
+    }
+}
